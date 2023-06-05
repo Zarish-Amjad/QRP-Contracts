@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Taxable.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Taxable.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+contract Taxable is Ownable {
+    uint8 public tax = 5; // 5% 
+&nbsp;
+    mapping(address =&gt; uint8) public taxPercentages;
+    address[] taxReceiverList;
+&nbsp;
+    event UpdateTax(uint8 oldPercentage, uint8 newPercentage);
+    event UpdateReceiverTax(
+        address receiver,
+        uint8 oldPercentage,
+        uint8 newPercentage
+    );
+    event AddTaxReceiver(address receiver, uint8 percentage);
+    event RemoveTaxReceiver(address receiver);
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAllTaxReceivers() public view returns (address[] memory) {</span>
+<span class="cstat-no" title="statement not covered" >        return taxReceiverList;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function addTaxReceiver(address _receiver, uint8 _percentage) public onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >        require(taxPercentages[_receiver] == 0, "Receiver already exists")</span>;
+        
+        //? Whats the maximum possible percentage for a specific user?
+        //require(_percentage &lt;= 100, "Invalid percentage");
+&nbsp;
+        taxPercentages[_receiver] = _percentage;
+<span class="cstat-no" title="statement not covered" >        taxReceiverList.push(_receiver)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        emit AddTaxReceiver(_receiver, _percentage);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function updateReceiverTax(</span>
+        address _receiver,
+        uint8 _percentage
+    ) public onlyOwner {
+<span class="cstat-no" title="statement not covered" >        require(taxPercentages[_receiver] &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        emit UpdateReceiverTax(</span>
+            _receiver,
+            taxPercentages[_receiver],
+            _percentage
+        );
+        taxPercentages[_receiver] = _percentage;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function removeTaxReceiver(uint _index) public onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >        require(_index &lt; taxReceiverList.length, "Invalid index")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        emit RemoveTaxReceiver(taxReceiverList[_index]);</span>
+        taxPercentages[taxReceiverList[_index]] = 0;
+        taxReceiverList[_index] = taxReceiverList[taxReceiverList.length - 1];
+<span class="cstat-no" title="statement not covered" >        taxReceiverList.pop()</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function updateTax(uint8 _tax) public onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >        require(_tax &lt;= 10, "Tax should not be greater than 10 %")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        emit UpdateTax(tax, _tax);</span>
+        tax = _tax;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function calculateFeeAmount(</span>
+        uint256 _amount,
+        uint _fee
+    ) public pure returns (uint256) {
+<span class="cstat-no" title="statement not covered" >        return (_amount * _fee) / 100;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function calculateTaxAmount(uint256 _amount) public view returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        return calculateFeeAmount(_amount, tax);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function calculateTransferAmount(</span>
+        uint256 _amount,
+        uint _tax
+    ) public pure returns (uint256) {
+<span class="cstat-no" title="statement not covered" >        return _amount - _tax;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function _taxEqualsHundred() internal view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        uint sum = 0;</span>
+<span class="cstat-no" title="statement not covered" >        for (uint i = 0; i &lt; taxReceiverList.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            address account = taxReceiverList[i];</span>
+            sum += taxPercentages[account];
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return (sum == 100);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed May 24 2023 16:42:46 GMT+0500 (Pakistan Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
